@@ -2,15 +2,66 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Contract Manager</title>
+    
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
+    <section class="nav">
+      <!-- Coming soon -->
+    </section>
+    <section class="content">
+      <!-- Content Table -->
+      <div class="content__title">
+        <div class="content__title--wrapper">
+          <h1>Dashboard</h1>
+          <button id="add">Add new</button>
+        </div>
+        <h2>Contracts & Abonnements</h2>
+      </div>
+      <div class="content__wrapper">
+        <div class="add_content">
+          <input type="text" name="name" id="name">
+          <select name="intervall" id="intervall">
+              <option value="Daily">Daily</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Monthly" selected>Monthly</option>
+              <option value="Yearly">Yearly</option>
+            </select>
+            <input type="date" name="start" id="start">
+            <select name="runtime" id="runtime">
+                <option value="1 Month">1 Month</option>
+                <option value="3 Months">3 Months</option>
+                <option value="6 Months">6 Months</option>
+                <option value="1 Year">1 Year</option>
+                <option value="Infinite" selected>Infinite</option>
+            </select>
+            <input type="number" name="cost" id="cost">
+            <input type="date" name="reminder" id="reminder">
+        </div>
+        <button id="add-row">Add</button>
+        <table class="content__table" id="table">
+          <tbody>
+            <tr class="content__table--header">
+              <th>Name</th>
+              <th>Pay Intervall</th>
+              <th>Start Pay Date</th>
+              <th>Runtime</th>
+              <th>Cost</th>
+              <th>Remind me on</th>
+            </tr>
+         </tbody>
+        </table>
+        <button id="save">Save</button>
+      </div>
+    </section>
+    <section class="info"></section>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="./renderer.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/Export.js"></script>
+    <script src="./assets/scripts/Add.js"></script>
   </body>
 </html>
